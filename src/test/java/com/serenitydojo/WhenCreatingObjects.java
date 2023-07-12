@@ -1,6 +1,7 @@
 package com.serenitydojo;
 
 import org.junit.Test;
+import static com.serenitydojo.Cat.usualFood;
 
 public class WhenCreatingObjects {
 
@@ -23,4 +24,16 @@ public class WhenCreatingObjects {
 
     }
 
+    @Test
+    public void cat_makes_noise() {
+        Cat felix = new Cat("Felix", 4);
+        Cat spot = new Cat("Spot", "Salmon", 3);
+        felix.makeNoise();
+        felix.feed("Tuna");
+        felix.groom();
+        spot.makeNoise();
+        spot.feed("Salmon");
+        System.out.println(Cat.usualFood());
+        System.out.println(usualFood());
+    }
 }
